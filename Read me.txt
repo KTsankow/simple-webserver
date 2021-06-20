@@ -1,3 +1,0 @@
-echo "* Docker container ..."
-docker build /shared/ -t webserver:v1
-docker container run –dit –p 8080:80 webserver:v1
