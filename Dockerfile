@@ -1,6 +1,5 @@
-FROM centos:latest
+FROM nginx
 MAINTAINER konstantin
-RUN dnf -y install httpd
-COPY index.html /var/www/html/
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+COPY html/* /usr/share/nginx/html/
 EXPOSE 80
+EXPOSE 8080
